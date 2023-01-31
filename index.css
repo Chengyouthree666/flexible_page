@@ -1,0 +1,25 @@
+/* 宽屏：>= 1200px */
+body {
+  /* background-color: rgb(205, 194, 194); */
+}
+
+/* 中等屏幕 992~1200 */
+@media screen and (max-width: 1200px) {
+  body {
+    /* background-color: #f2bb6e; */
+  }
+}
+
+/* 小屏： 768~992 */
+@media screen and (max-width: 992px) {
+  body {
+    /* background-color: rgb(90, 146, 250); */
+  }
+}
+
+/* 超小： <768 */
+@media screen and (max-width: 768px) {
+  body {
+    /* background-color: rgb(237, 230, 230); */
+  }
+}

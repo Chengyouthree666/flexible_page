@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./index.css">
+</head>
+<script src="./node_modules/amfe-flexible/index.min.js""></script>
+<style>
+  h3{
+    font-size: 0.5rem;
+    margin: 0;
+    padding: 0;
+  }
+  .box-container {
+    display: flex;
+    height: 2rem;
+    width: 8rem;
+    margin-top: 0.5rem;
+  }
+  .box {
+    flex: 1;
+    margin: 1px;
+    background-color: rgb(199, 92, 92);
+    font-size: 0.5rem;
+  }
+</style>
+<body>
+  <h3 id="title">this is a title</h3>
+  <div class="box-container">
+    <div class="box">one</div>
+    <div class="box">two</div>
+    <div class="box">three</div>
+  </div>
+</body>
+<script>
+  window.onload = function() {
+
+    function setTitleText(text = 'this is a title') {
+      document.querySelector('#title').innerHTML = text;
+    }
+
+    function dynamicPageLoad() {
+      const width = window.screen.width;
+      if (width >= 1200) {
+        setTitleText('宽屏设备')
+      } else if (width >= 992) {
+        setTitleText('中等屏幕')
+      } else if (width >= 768) {
+        setTitleText('小屏设备')
+      } else {
+        setTitleText('超小屏幕')
+      }
+    }
+    dynamicPageLoad()
+
+    window.addEventListener('resize', dynamicPageLoad)
+  }
+</script>
+</html>
